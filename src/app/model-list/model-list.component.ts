@@ -13,7 +13,6 @@ export class ModelListComponent implements OnInit {
 
   getModels(): void {
     this.modelservice.getModels().subscribe(models => this.models = models);
-    console.log(this.models);
   }
   ngOnInit(): void {
     this.getModels();

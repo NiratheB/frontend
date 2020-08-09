@@ -1,6 +1,14 @@
 <h2>Models</h2>
-<h3>Spheres</h3>
-<div *ngFor="let sphere of models.spheres">
-  <div>{{sphere.color}}</div>
+<div class="card" display = "sphere in models">
+  <div class="card-header">
+    Spheres
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let sphere of models.spheres">
+      <span [style.background-color]="'#'+sphere.color">Color</span>
+      <span>Radius: {{sphere.attributes.radius}}</span>
+    </li>
+  </ul>
 </div>
+
 
