@@ -4,7 +4,7 @@
     Spheres
   </div>
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let sphere of models.spheres">
+    <li class="list-group-item" *ngFor="let sphere of models.spheres" [class.active]="sphere== selectedShape" (click)="onSelectSphere(sphere)">
       <span [style.background-color]="'#'+sphere.color">Color</span>
       <span>Radius: {{sphere.attributes.radius}}</span>
     </li>

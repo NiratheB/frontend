@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Model} from '../model';
+import {Model, Shape} from '../model';
 import {ModelService} from '../model.service';
 
 @Component({
@@ -9,6 +9,7 @@ import {ModelService} from '../model.service';
 })
 export class ModelListComponent implements OnInit {
   models: Model;
+  selectedShape: Shape;
   constructor(private modelservice: ModelService) { }
 
   getModels(): void {
@@ -16,6 +17,10 @@ export class ModelListComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getModels();
+  }
+
+  onSelectSphere(shape: Shape): void{
+    this.selectedShape = shape;
   }
 
 }
