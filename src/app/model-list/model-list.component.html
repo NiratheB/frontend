@@ -1,0 +1,25 @@
+<div>
+  <app-model [shape]="selectedShape"></app-model>
+</div>
+<h2>Model List</h2>
+<div class="container-fluid">
+  <div *ngIf="models" [style.width]="'50%'">
+    <div class="card" *ngIf = "models.spheres">
+      <div class="card-header">
+        Spheres
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let sphere of models.spheres" [class.active]="selectedShape && sphere== selectedShape" (click)="onSelectSphere(sphere)">
+          <span [style.background-color]="'#'+sphere.color">Color</span>
+          <span>Radius: {{sphere.attributes.radius}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
