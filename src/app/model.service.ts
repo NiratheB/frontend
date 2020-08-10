@@ -9,7 +9,7 @@ import {catchError, tap} from 'rxjs/operators';
 })
 export class ModelService {
 
-  private url = 'http://127.0.0.1:8000/models/';
+  private url = 'http://0.0.0.0:8080/models/';
 
   constructor(private http: HttpClient) {
     this.http = http;
