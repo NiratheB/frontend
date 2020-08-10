@@ -1,6 +1,5 @@
-### Stage 1: build ###
 
-FROM node:11.4.0-alpine as builder
+FROM node:14.7.0
 
 # Set working directory.
 RUN mkdir /app
@@ -15,6 +14,7 @@ RUN npm install
 # Copy app files.
 COPY . /app
 
+EXPOSE 4200
 
 # Build app
 RUN npm run build
@@ -22,3 +22,5 @@ RUN npm run build
 RUN $(npm bin)/ng build
 
 RUN $(npm bin)/ng serve
+
+
