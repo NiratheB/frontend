@@ -6,6 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Can see a list of models
 - Click on a model to see 3D view of the model
 
+## Example
+![alt-text](https://github.com/NiratheB/frontend/blob/master/sample.gif)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
